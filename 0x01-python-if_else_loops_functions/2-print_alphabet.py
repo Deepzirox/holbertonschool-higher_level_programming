@@ -2,4 +2,4 @@
 
 
 for ch in range(97, 123):
-	print("{:s}".format(chr(ch)), end='')
+    print("{:s}".format(chr(ch)), end='')
