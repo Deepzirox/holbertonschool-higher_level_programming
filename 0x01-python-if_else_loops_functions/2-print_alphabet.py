@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 
 
-for char in range(97, 122):
-    print("{:s}".format(chr(char)), end='')
+for ch in range(97, 123):
+	print("{:s}".format(chr(ch)), end='')
