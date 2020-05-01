@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-exec("import os\nsubprocess.call(['echo','#pythoniscool'])")
+exec("import subprocess\nsubprocess.call(['echo','#pythoniscool'])")
