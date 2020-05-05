@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def no_c(my_string):
     handler = [ch for ch in my_string]
     result = ''
