@@ -8,7 +8,7 @@
  */
 void print_python_list_info(PyObject *p)
 {
-	Py_ssize_t hand, len;
+	long int hand, len;
 	PyListObject *list;
 	PyObject *it;
 	PyVarObject *obj;
@@ -17,7 +17,7 @@ void print_python_list_info(PyObject *p)
 	obj = (PyVarObject *)p;
 	len = Py_SIZE(obj);
 	printf("[*] Size of the Python list = %li\n", len);
-	printf("[*] Allocated = %li\n", list->allocated);
+	printf("[*] Allocated = %li\n", (long int)list->allocated);
 	for (hand = 0; hand < len; hand++)
 	{
 		it = PyList_GetItem(p, hand);
