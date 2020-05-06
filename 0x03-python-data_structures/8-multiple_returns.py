@@ -7,4 +7,3 @@ def multiple_returns(sentence):
         lenght = len(sentence)
 
     return (lenght, strhandler)
-
