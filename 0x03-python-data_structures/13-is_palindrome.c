@@ -11,7 +11,6 @@ int is_palindrome(listint_t **head)
 	listint_t *check = *head;
 	int first = 0;
 	int last = 0;
-	int count = 0;
 
 	if (check == NULL)
 		return (1);
@@ -23,7 +22,7 @@ int is_palindrome(listint_t **head)
 		count++;
 	}
 	last = check->n;
-	if (first == last && count != 0)
+	if (first == last)
 	{
 		return (1);
 	}
