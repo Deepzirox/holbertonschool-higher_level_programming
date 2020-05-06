@@ -4,23 +4,23 @@
 #include <listobject.h>
 /**
  * print_python_list_info - print info of a list in python
- * @x: Python object
+ * @p: Python object
  */
-void print_python_list_info(PyObject *x)
+void print_python_list_info(PyObject *p)
 {
 	Py_ssize_t hand, len;
 	PyListObject *list;
 	PyObject *it;
 	PyVarObject *obj;
 
-	list = (PyListObject *)x;
-	obj = (PyVarObject *)x;
+	list = (PyListObject *)p;
+	obj = (PyVarObject *)p;
 	len = Py_SIZE(obj);
 	printf("[*] Size of the Python list = %li\n", len);
 	printf("[*] Allocated = %li\n", list->allocated);
 	for (hand = 0; hand < len; hand++)
 	{
-		it = PyList_GetItem(x, hand);
+		it = PyList_GetItem(p, hand);
 		printf("Element %li: %s\n", hand, Py_TYPE(it)->tp_name);
 	}
 }
