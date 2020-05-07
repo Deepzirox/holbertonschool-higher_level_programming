@@ -11,6 +11,8 @@ def roman_to_int(roman_string):
     }
     if not isinstance(roman_string, str) or roman_string == None:
         return 0
+    if roman_string.isnumeric == True:
+        return 0
     sub = False
     res = 0
     counter = 0
