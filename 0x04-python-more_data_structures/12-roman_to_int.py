@@ -9,9 +9,17 @@ def roman_to_int(roman_string):
         "D" : 500,
         "M" : 1000
     }
+    if not isinstance(roman_string, str) or roman_string == None:
+        return 0
+    sub = False
     res = 0
-    for i in range(len(roman_string)):
-        res += base.get(roman_string[i])
-        if roman_string[i - 1] == 'I' and i != 0:
-            res -= 2
+    counter = 0
+    for i in roman_string:
+        if i == "I":
+            sub = True
+        if sub and i != "I":
+            res += base.get(i) - 2
+            sub = False
+        else:
+            res += base.get(i)
     return res
