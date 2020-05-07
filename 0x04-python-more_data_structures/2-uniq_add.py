@@ -6,11 +6,8 @@ def uniq_add(my_list=[]):
     for i in my_list:
         if i in tmp:
             ocurrence = True
-        
-        if ocurrence != True:
+        if ocurrence is not True:
             res += i
-
         ocurrence = False
         tmp.append(i)
-        
     return res
