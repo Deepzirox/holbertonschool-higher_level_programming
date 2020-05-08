@@ -20,7 +20,7 @@ def roman_to_int(roman_string):
         if i == "I":
             sub = True
         if sub and i != "I":
-            res -= (base.get(i) - 1)
+            res += base.get(i) - 2
             sub = False
         else:
             res += base.get(i)
