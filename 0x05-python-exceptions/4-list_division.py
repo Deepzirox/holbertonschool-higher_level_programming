@@ -6,6 +6,7 @@ def list_division(my_list_1, my_list_2, list_length):
         try:
             div = my_list_1[n] / my_list_2[n]
             res.append(div)
+            continue
         except ZeroDivisionError:
             print("{}".format("division by 0"))
             res.append(0)
@@ -16,5 +17,5 @@ def list_division(my_list_1, my_list_2, list_length):
             print("{}".format("out of range"))
             res.append(0)
         finally:
-            continue
+            pass
     return res
