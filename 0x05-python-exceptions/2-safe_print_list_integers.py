@@ -8,5 +8,5 @@ def safe_print_list_integers(my_list=[], x=0):
         except (ValueError, TypeError):
             i += 1
             continue
-    print(' ')
+    print('')
     return intc
