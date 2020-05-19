@@ -31,3 +31,16 @@ class Square:
         return area(size)
         '''
         return self.__size ** 2
+
+    @property
+    def size(self):
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        try:
+            if value <= 0:
+                raise Exception("size must be >= 0")
+        except TypeError:
+            raise Exception("size must be an integer")
+        self.__size = value

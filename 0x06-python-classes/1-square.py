@@ -3,6 +3,8 @@
     Create class for create and instance of a class
     adding an private variable (size)
 '''
+
+
 class Square:
     '''
     Square - adding private variable
