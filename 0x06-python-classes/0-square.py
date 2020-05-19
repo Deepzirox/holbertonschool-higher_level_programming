@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"0-square class file"
+"0-square define"
 
 
 class Square: 
-    'Empty class'
+    """ Class Square
+    """
     pass
