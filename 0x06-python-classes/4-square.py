@@ -3,6 +3,7 @@
     Create class for create and instance of a class
     adding aprivate variable (size)
     adding exceptions
+    adding getter/setter
 '''
 
 
