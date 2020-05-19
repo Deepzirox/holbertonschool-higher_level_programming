@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 ''' 2-Square
     Create class for create and instance of a class
     adding aprivate variable (size)
