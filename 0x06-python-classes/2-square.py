@@ -15,9 +15,9 @@ class Square:
     public:
     '''
     def __init__(self, size=0):
-        try:
-            if size < 0:
-                raise Exception("size must be >= 0")
-        except TypeError:
+        if not isinstance(size, int):
             raise Exception("size must be an integer")
-        self.__size = size
+        elif size < 0:
+            raise Exception("size must be >= 0")
+        else:
+            self.__size = size
