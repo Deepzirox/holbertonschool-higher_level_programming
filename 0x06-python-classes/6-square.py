@@ -65,10 +65,13 @@ class Square:
         '''
         Documentation about this function xd
         '''
-        if self.__size == 0:
-            print('')
+        if type(1) is not type(self.__position[0]) or type(1) is not type(self.__position[1]):
+                raise TypeError("position must be a tuple of 2 positive integers")
         else:
-            for _ in range(self.position[1]):
+            if self.__size == 0:
                 print('')
-            for _ in range(self.__size):
-                print(' ' * self.position[0] + '#' * self.__size)
+            else:
+                for _ in range(self.position[1]):
+                    print('')
+                for _ in range(self.__size):
+                    print(' ' * self.position[0] + '#' * self.__size)
