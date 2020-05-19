@@ -2,7 +2,7 @@
 "0-square define"
 
 
-class Square: 
+class Square:
     """ Class Square
     """
     pass
