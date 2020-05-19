@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-''' 0-Square
-    Create - class for create and instance of a class
-'''
+"0-square class file"
 
 
 class Square: 
     'Empty class'
     pass
-
