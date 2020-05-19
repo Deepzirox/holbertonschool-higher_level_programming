@@ -1,6 +1,3 @@
-
-
-
 ''' 2-Square
     Create class for create and instance of a class
     adding aprivate variable (size)
@@ -27,11 +24,10 @@ class Square:
             raise Exception("size must be >= 0")
         else:
             self.__size = size
-        
         if not isinstance(position, tuple) or len(position) > 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
-            self.__position = position 
+            self.__position = position
 
     def area(self):
         '''
@@ -57,7 +53,6 @@ class Square:
     def position(self):
         return self.__position
 
-
     @position.setter
     def position(self, value):
         if not isinstance(position, tuple) or len(position) != 2:
@@ -75,4 +70,4 @@ class Square:
             for _ in range(self.position[1]):
                 print('')
             for _ in range(self.__size):
-                print( ' ' * self.position[0]+ '#' * self.__size)
+                print(' ' * self.position[0] + '#' * self.__size)
