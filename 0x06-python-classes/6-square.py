@@ -66,7 +66,7 @@ class Square:
 
     def my_print(self):
         '''
-        Documentation about this function xd
+        Documentation about this function
         '''
         if self.__size == 0:
             print('')
