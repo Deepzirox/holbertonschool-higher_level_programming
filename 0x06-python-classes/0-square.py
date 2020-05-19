@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"0-square define"
+"0-square define.py"
 
 
 class Square:
