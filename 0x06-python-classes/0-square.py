@@ -7,5 +7,4 @@ class Square:
     Square - Start Square
     @Atributtes: 0
     '''
-    def __init__(self):
-        pass
+    pass
