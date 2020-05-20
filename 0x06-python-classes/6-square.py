@@ -6,17 +6,9 @@
     adding getter/setter
 '''
 
-
-def check_type(p1, p2):
-    '''
-    check for type
-    '''
-    return isinstance(p1, int) or not isinstance(p2, int)
-
-
 class Square:
     '''
-    Square - adding exceptions file
+    Square - adding exceptions
     @Atributtes: 1
     private:
         size
@@ -34,7 +26,7 @@ class Square:
             self.__size = size
         if not isinstance(position, tuple) or len(position) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif not check_type(position[0], position[1]):
+        elif not isinstance(position[0], int) or not isinstance(position[1], int):
             raise TypeError("position must be a tuple of 2 positive integers")
         elif position[0] < 0 or position[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
