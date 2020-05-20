@@ -75,6 +75,13 @@ class Square:
             for _ in range(self.__size):
                 print(' ' * self.position[0] + '#' * self.__size)
 
-    def __repr__(self):
-        self.my_print()
-        return ''
+    def __str__(self):
+        res = ""
+        if self.__size == 0:
+            res += ''
+        else:
+            for _ in range(self.position[1]):
+                res += ''
+            for _ in range(self.__size):
+                res += (' ' * self.position[0] + '#' * self.__size + '\n')
+        return res[:-1]
