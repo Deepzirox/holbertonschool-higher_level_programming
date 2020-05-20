@@ -67,12 +67,10 @@ class Square:
         '''
         Documentation about this function xd
         '''
-        res = ""
         if self.__size == 0:
-            res += ''
+            print('')
         else:
             for _ in range(self.position[1]):
-                res += ''
+                print('')
             for _ in range(self.__size):
-                res += (' ' * self.position[0] + '#' * self.__size + '\n')
-        print(res)
+                print(' ' * self.position[0] + '#' * self.__size)
