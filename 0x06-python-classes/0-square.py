@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"0-square define.py"
+"Define new Square"
 
 
-class Square:
+class Square():
     """ Class Square
     """
-    def __init__(self):
-        pass
+    pass
