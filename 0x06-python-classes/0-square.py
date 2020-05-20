@@ -3,6 +3,6 @@
 
 
 class Square:
-    """ Class Square
-    """
-    pass
+	""" Class Square
+	"""
+	pass
