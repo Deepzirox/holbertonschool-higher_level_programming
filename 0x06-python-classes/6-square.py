@@ -75,6 +75,4 @@ class Square:
                 res += ''
             for _ in range(self.__size):
                 res += (' ' * self.position[0] + '#' * self.__size + '\n')
-            if res[-1] == '\n':
-                res = res[:-1]
         print(res)
