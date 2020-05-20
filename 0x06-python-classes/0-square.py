@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"0-square define.py"
+"0-square"
 
 
-class Square():
+class Square:
     """ Class Square
     """
     pass
