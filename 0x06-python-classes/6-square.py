@@ -19,16 +19,9 @@ class Square:
         receive (self) | return (self.size ** 2)
     '''
     def __init__(self, size=0, position=(0, 0)):
-        if not isinstance(size, int):
-            raise Exception("size must be an integer")
-        elif size < 0:
-            raise Exception("size must be >= 0")
-        else:
-            self.__size = size
-        if not isinstance(position, tuple) or len(position) > 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-            self.__position = position
+
+        self.__size = size    
+        self.__position = position
 
     def area(self):
         '''
