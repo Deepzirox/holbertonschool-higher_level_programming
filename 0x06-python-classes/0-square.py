@@ -2,7 +2,7 @@
 "0-square define.py"
 
 
-class Square:
+class Square():
     """ Class Square
     """
     pass
