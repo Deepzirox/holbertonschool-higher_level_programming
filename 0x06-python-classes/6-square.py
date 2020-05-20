@@ -20,9 +20,9 @@ class Square:
     '''
     def __init__(self, size=0, position=(0, 0)):
         if not isinstance(size, int):
-            raise Exception("size must be an integer")
+            raise TypeError("size must be an integer")
         elif size < 0:
-            raise Exception("size must be >= 0")
+            raise ValueError("size must be >= 0")
         else:
             self.__size = size
         if not isinstance(position, tuple) or len(position) > 2:
@@ -44,9 +44,9 @@ class Square:
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
-            raise Exception("size must be an integer")
+            raise TypeError("size must be an integer")
         elif size < 0:
-            raise Exception("size must be >= 0")
+            raise ValueError("size must be >= 0")
         else:
             self.__size = value
 
