@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"Define new Square"
+"0-square define.py"
 
 
-class Square():
+class Square:
     """ Class Square
     """
     pass
