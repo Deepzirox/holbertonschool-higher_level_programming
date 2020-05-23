@@ -1,0 +1,58 @@
+Testing 0-add_integer
+======================
+
+------- test for results -----------------
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(5, 5)
+10
+>>> add_integer(-5, -5)
+-10
+>>> add_integer(28937489237487238474832748927, 23874829748972742897498237)
+28961364067236211217730247164
+
+------ Test for fail ----------------------
+= PASSING STRINGS
+>>> add_integer(20, "b") #doctest +ELLIPSIS
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer("b", 20) #doctest +ELLIPSIS
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+= PASSING BOOLEANS
+>>> add_integer(20, True) #doctest +ELLIPSIS
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer(True, 20) #doctest +ELLIPSIS
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+= PASSING ARRAYS
+>>> add_integer(20, []) #doctest +ELLIPSIS
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer([], 20) #doctest +ELLIPSIS
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer("a", 40)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(100)
+198
+
+>>> add_integer(float('inf'), 10)
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer("asd", "adaasd")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(2.999999999999999999)
+101
