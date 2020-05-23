@@ -18,7 +18,7 @@ def text_indentation(text):
     for i in text.strip():
         if i != ' ':
             x = True
-        if x == True:
+        if x is True:
             print(i, end='')
         if i in '.:?':
             print('\n')
