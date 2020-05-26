@@ -1,0 +1,1 @@
+Directory for "everything is an object task"
