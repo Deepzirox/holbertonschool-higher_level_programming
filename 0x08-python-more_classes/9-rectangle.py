@@ -85,4 +85,5 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
+        cls.number_of_instances += 1
         return cls(size, size)
