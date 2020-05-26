@@ -12,9 +12,8 @@ class Rectangle:
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
-        self.__height = height
-        self.__width = width
-        Rectangle.number_of_instances += 1
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
@@ -25,7 +24,7 @@ class Rectangle:
         if type(value) not in [int]:
             raise TypeError("width must be an integer")
         elif value < 0:
-            raise ValueError("ValueError")
+            raise ValueError("width must be >= 0")
         else:
             self.__width = value
 
@@ -36,9 +35,9 @@ class Rectangle:
     @height.setter
     def height(self, value):
         if type(value) not in [int]:
-            raise TypeError("width must be an integer")
+            raise TypeError("height must be an integer")
         elif value < 0:
-            raise ValueError("ValueError")
+            raise ValueError("height must be >= 0")
         else:
             self.__height = value
 
