@@ -50,8 +50,7 @@ class Rectangle(BaseGeometry):
             width {[type]} -- [description]
             height {[type]} -- [description]
         """
-        super().integer_validator
-        self.integer_validator("width", self.__width)
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
         self.__width = width
-        self.integer_validator("height", self.__height)
         self.__height = height
