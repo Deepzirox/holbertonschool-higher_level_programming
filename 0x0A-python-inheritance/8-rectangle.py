@@ -7,15 +7,16 @@
         ValueError: [description]
 """
 
+
 class BaseGeometry:
     """[summary]
-    """    
+    """
     def area(self):
         """[summary]
 
         Raises:
             Exception: [description]
-        """        
+        """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
@@ -28,7 +29,7 @@ class BaseGeometry:
         Raises:
             TypeError: [description]
             ValueError: [description]
-        """        
+        """
         if type(value) not in [int]:
             raise TypeError("{} must be an integer".format(name))
         else:
@@ -41,7 +42,7 @@ class Rectangle(BaseGeometry):
 
     Arguments:
         BaseGeometry {[type]} -- [description]
-    """    
+    """
     def __init__(self, width, height):
         super().integer_validator
         self.__width = width
