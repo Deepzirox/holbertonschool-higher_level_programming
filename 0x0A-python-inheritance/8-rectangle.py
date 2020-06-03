@@ -44,6 +44,12 @@ class Rectangle(BaseGeometry):
         BaseGeometry {[type]} -- [description]
     """
     def __init__(self, width, height):
+        """[summary]
+
+        Arguments:
+            width {[type]} -- [description]
+            height {[type]} -- [description]
+        """        
         super().integer_validator
         self.__width = width
         self.__height = height
