@@ -44,12 +44,12 @@ class Rectangle(BaseGeometry):
         BaseGeometry {[type]} -- [description]
     """
     def __init__(self, width, height):
-        super().integer_validator(str(width), self.__width)
+        super().integer_validator
+        super().area
         self.__width = width
-        super().integer_validator(str(height), self.__height)
         self.__height = height
-        
-        
+        self.integer_validator(str(height), self.__height)
+        self.integer_validator(str(width), self.__width)
 
     def area(self):
         """[summary]
