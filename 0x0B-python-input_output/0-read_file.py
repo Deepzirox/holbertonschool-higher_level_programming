@@ -9,6 +9,6 @@ def read_file(filename=""):
     Args:
         filename (str, optional): [Path of file]. Defaults to "".
     """
-    with open(filename, encoding='utf8') as file:
-        print(file.read())
+    with open(filename, encoding='utf-8') as file:
+        print(file.read(), end='')
     file.close()
