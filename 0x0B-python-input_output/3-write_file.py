@@ -9,6 +9,6 @@ def write_file(filename="", text=""):
         filename (str, optional): [description]. Defaults to "".
         text (str, optional): [description]. Defaults to "".
     """
-    with open(filename, mode="w", encoding="utf-8") as file:
+    with open(filename, mode="w+", encoding="utf-8") as file:
         file.write(text)
     file.close()
