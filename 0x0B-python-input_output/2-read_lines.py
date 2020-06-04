@@ -9,8 +9,8 @@ def read_lines(filename="", nb_lines=0):
     Args:
         filename (str, optional): [description]. Defaults to "".
         nb_lines (int, optional): [description]. Defaults to 0.
-    """    
-    with open(filename) as file:
+    """
+    with open(filename, encoding='utf-8') as file:
         data = file.read()
         if nb_lines <= 0:
             print(data, end='')
