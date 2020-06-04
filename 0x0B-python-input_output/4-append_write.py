@@ -9,6 +9,6 @@ def append_write(filename="", text=""):
         filename (str, optional): [description]. Defaults to "".
         text (str, optional): [description]. Defaults to "".
     """
-    with open(filename, 'a') as file:
+    with open(filename, mode="a+", encoding="utf-8") as file:
         file.write(text)
     file.close()
