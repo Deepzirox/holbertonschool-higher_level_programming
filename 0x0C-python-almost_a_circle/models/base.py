@@ -28,6 +28,7 @@ class Base:
         else:
             self.id = id
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """[summary]
 
@@ -37,15 +38,9 @@ class Base:
         Returns:
             [type]: [description]
         """
-        if len(list_dictionaries) == 0 or list_dictionaries is None:
+        if len(list_dictionaries[0]) == 0 or list_dictionaries is None:
             return "[]"
-        new_json_array = []
-        for dictionary in list_dictionaries:
-            if len(dictionary) == 0 or dictionary is None:
-                return "[]"
-            new_json_array.append(dictionary)
-        else:
-            return json.dumps(new_json_array)
+        return json.dumps(new_json_array)
 
     @classmethod
     def save_to_file(cls, list_objs):
