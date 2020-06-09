@@ -38,7 +38,7 @@ class Base:
         Returns:
             [type]: [description]
         """
-        if len(list_dictionaries[0]) == 0 or list_dictionaries is None:
+        if len(list_dictionaries) == 0 or list_dictionaries is None:
             return "[]"
         return json.dumps(new_json_array)
 
