@@ -74,10 +74,10 @@ class Base:
         Returns:
             [type]: [description]
         """
-        if json_string is not None:
-            return json.loads(json_string)
+        if json_string is not None or len(json_string) == 0:
+            return []
         else:
-            return "[]"
+            return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
