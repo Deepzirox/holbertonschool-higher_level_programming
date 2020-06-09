@@ -57,12 +57,12 @@ class Base:
         towrite = []
         with open(cls.__name__ + ".json", mode='w+') as file:
             if list_objs is None:
-                file.write(json.dumps([]))
+                file.write(cls.to_json_string(None))
             else:
                 for obj in list_objs:
                     towrite.append(obj.to_dictionary())
                 else:
-                    file.write(json.dumps(towrite))
+                    file.write(cls.to_json_string(towrite))
 
     @staticmethod
     def from_json_string(json_string):
