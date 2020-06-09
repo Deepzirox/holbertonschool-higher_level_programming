@@ -38,7 +38,7 @@ class Base:
         Returns:
             [type]: [description]
         """
-        if list_dictionaries != None:
+        if list_dictionaries is not None:
             new_json_array = []
             for dictionary in list_dictionaries:
                 new_json_array.append(dictionary)
