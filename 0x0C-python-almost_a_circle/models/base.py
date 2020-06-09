@@ -38,12 +38,14 @@ class Base:
         Returns:
             [type]: [description]
         """
-        
-        new_json_array = []
-        for dictionary in list_dictionaries:
-            new_json_array.append(dictionary)
+        if list_dictionaries != None:
+            new_json_array = []
+            for dictionary in list_dictionaries:
+                new_json_array.append(dictionary)
+            else:
+                return json.dumps(new_json_array)
         else:
-            return json.dumps(new_json_array)
+            return "[]"
 
     @classmethod
     def save_to_file(cls, list_objs):
