@@ -145,14 +145,13 @@ class Base:
                     else:
                         v1.append(dictionary)
                     c += 1
-                else:
-                    c = 0
-                    for k in keys:
-                        for v in range(len(v1)):
-                            n = {k1: int(val) for k1, val in zip(k, v1[v + c])}
-                            instances.append(cls.create(**n))
-                            c += 1
-                            break
+                c = 0
+                for k in keys:
+                    for v in range(len(v1)):
+                        n = {k1: int(val) for k1, val in zip(k, v1[v + c])}
+                        instances.append(cls.create(**n))
+                        c += 1
+                        break
         except FileNotFoundError:
             return []
         return instances
