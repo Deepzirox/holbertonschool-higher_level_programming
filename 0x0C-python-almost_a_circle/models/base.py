@@ -100,11 +100,10 @@ class Base:
         instances = []
         try:
             with open(cls.__name__ + ".json", "r") as jsonfile:
-                load = json.loads(jsonfile.read())
+                load = cls.from_json_string(jsonfile.read())
                 for dictionary in load:
-                    instances.append(cls(**dictionary))
+                    instances.append(cls.create(**dictionary))
                 else:
-                    print(load)
                     return instances
         except FileNotFoundError:
             return []
