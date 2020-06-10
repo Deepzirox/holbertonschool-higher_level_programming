@@ -118,7 +118,7 @@ class Base:
         """
         with open(cls.__name__ + '.csv', 'w') as f:
             if list_objs is None:
-                w = csv.DictWriter(f, None)
+                f.write([])
             else:
                 for obj in list_objs:
                     x = obj.to_dictionary().keys()
@@ -136,20 +136,23 @@ class Base:
         keys = []
         v1 = []
         c = 0
-        with open(cls.__name__ + '.csv', mode='r') as infile:
-            reader = csv.reader(infile)
-            for dictionary in reader:
-                if c % 2 == 0:
-                    keys.append(dictionary)
+        try:
+            with open(cls.__name__ + '.csv', mode='r') as infile:
+                reader = csv.reader(infile)
+                for dictionary in reader:
+                    if c % 2 == 0:
+                        keys.append(dictionary)
+                    else:
+                        v1.append(dictionary)
+                    c += 1
                 else:
-                    values.append(dictionary)
-                c += 1
-            else:
-                c = 0
-                for k in keys:
-                    for v in range(len(values)):
-                        new = {key: int(val) for key, val in zip(k, v1[v + c])}
-                        instances.append(cls.create(**new))
-                        c += 1
-                        break
+                    c = 0
+                    for k in keys:
+                        for v in range(len(v1)):
+                            new = {key: int(val) for key, val in zip(k, v1[v + c])}
+                            instances.append(cls.create(**new))
+                            c += 1
+                            break
+        except FileNotFoundError:
+            return []
         return instances
