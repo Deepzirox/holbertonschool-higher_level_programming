@@ -8,7 +8,7 @@ testing
 """
 
 
-class TestBase(unittest.TestCase):
+class TestRectangle(unittest.TestCase):
     """
     Testing class
     """
