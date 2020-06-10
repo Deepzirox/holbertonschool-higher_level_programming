@@ -149,8 +149,8 @@ class Base:
                     c = 0
                     for k in keys:
                         for v in range(len(v1)):
-                            new = {key: int(val) for key, val in zip(k, v1[v + c])}
-                            instances.append(cls.create(**new))
+                            n = {k1: int(val) for k1, val in zip(k, v1[v + c])}
+                            instances.append(cls.create(**n))
                             c += 1
                             break
         except FileNotFoundError:
