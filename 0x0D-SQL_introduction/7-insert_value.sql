@@ -1,1 +1,2 @@
-insert into first_table(id, name) values(89, 'Holberton School');
+-- Insert new row into firs_table
+INSERT INTO first_table(id, name) VALUES(89, 'Holberton School');
