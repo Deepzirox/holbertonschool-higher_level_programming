@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-from sqlalchemy import (create_engine, MetaData, Table, select)
-import sys
-from model_state import Base, State
 
 '''
 Get all states using sql alchemy
 '''
+
+from sqlalchemy import (create_engine, MetaData, Table, select)
+import sys
+from model_state import Base, State
 
 def db_connect():
     '''
