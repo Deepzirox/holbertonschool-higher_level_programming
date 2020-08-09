@@ -16,7 +16,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     try:
-        states = session.query(State).filter_by(name="Texas").one()
+        states = session.query(State).filter_by(name=sys.argv[4]).first()
         print(states.id)
     except:
         print("Not found")
