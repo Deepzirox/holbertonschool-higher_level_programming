@@ -14,7 +14,7 @@ if __name__ == '__main__':
     db = db(host=h, port=p, user=argv[1], passwd=argv[2], db=argv[3])
     cursor = db.cursor()
     query = '''
-    SELECT name 
+    SELECT name
     FROM cities 
     WHERE state_id = (SELECT id FROM states WHERE name = '{}')
     '''.format(argv[4])
