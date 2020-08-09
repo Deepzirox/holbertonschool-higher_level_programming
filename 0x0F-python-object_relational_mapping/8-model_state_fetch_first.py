@@ -17,6 +17,6 @@ if __name__ == "__main__":
     session = Session()
     try:
         states = session.query(State).first()
-        print("{}: {}".format(1, states.name))
+        print("{}: {}".format(states.id, states.name))
     except:
         print()
