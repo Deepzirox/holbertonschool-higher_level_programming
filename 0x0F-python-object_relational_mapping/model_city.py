@@ -9,10 +9,12 @@ from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 from model_state import Base, State
 
+
 Base = declarative_base()
 
+
 class City(Base):
-    """ 
+    """
         Create City object
     """
     __tablename__ = "cities"
