@@ -15,7 +15,9 @@ if __name__ == "__main__":
         sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    query = session.query(City, State).filter(City.state_id == State.id).all()
+    query = session.query(
+        City, State).filter(
+            City.state_id == State.id).order_by(State.id, City.id).all()
     curr = 0
     for ct, st in query:
         if st.name == curr:
