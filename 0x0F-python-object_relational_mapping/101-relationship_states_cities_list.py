@@ -21,11 +21,11 @@ if __name__ == "__main__":
     curr = 0
     for ct, st in query:
         if st.name == curr:
-            print("\t{}: {}".format(ct.id, ct.name))
+            print("    {}: {}".format(ct.id, ct.name))
             continue
         else:
             print("{}: {}".format(st.id, st.name))
             curr = st.name
-        print("\t{}: {}".format(ct.id, ct.name))
+        print("    {}: {}".format(ct.id, ct.name))
 
     session.close()
