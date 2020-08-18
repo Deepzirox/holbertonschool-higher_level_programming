@@ -15,17 +15,9 @@ if __name__ == "__main__":
         sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    query = session.query(
-        City, State).filter(
-            City.state_id == State.id).order_by(State.id, City.id).all()
-    curr = 0
-    for ct, st in query:
-        if st.name == curr:
-            print("    {}: {}".format(ct.id, ct.name))
-            continue
-        else:
-            print("{}: {}".format(st.id, st.name))
-            curr = st.name
-        print("    {}: {}".format(ct.id, ct.name))
-
+    states = session.query(State).order_by(State.id).all()
+    for state in states:
+        print("{}: {}".format(state.id, state.name))
+        for cities in state.cities:
+            print("    {}: {}".format(cities.id, cities.name))
     session.close()
