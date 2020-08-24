@@ -9,7 +9,6 @@ import sys
 def error_code():
     """ error code """
     url = sys.argv[1]
-    value = sys.argv[2]
     try:
         with urllib.request.urlopen(url) as res:
             print(res.read().decode("utf-8"))
