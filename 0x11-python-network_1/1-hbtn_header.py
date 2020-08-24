@@ -8,6 +8,7 @@ import sys
 
 
 def get_request_id():
+	""" GET REQUEST ID FROM HEADER """
 	url = sys.argv[1]
 	with urllib.request.urlopen(url) as res:
 		headers = res.headers
