@@ -2,7 +2,7 @@
 
 """ Ok """
 
-from urllib import request, parse
+import urllib.request
 import sys
 
 
