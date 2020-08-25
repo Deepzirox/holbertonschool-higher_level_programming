@@ -9,7 +9,7 @@ import sys
 
 def post_email():
     """ Post fucking email """
-    res = requests.post(argv[1], data={'email': argv[2]})
+    res = requests.post(sys.argv[1], data={'email': argv[2]})
     print(res.text)
 
 
