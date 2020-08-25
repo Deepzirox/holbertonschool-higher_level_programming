@@ -9,7 +9,6 @@ def error_code():
 	""" ok """
 	re = requests.get(argv[1])
 	if re.status_code > 400:
-		
 		print("Error code: {}".format(re.status_code))
 	else:
 		print(re.text)
