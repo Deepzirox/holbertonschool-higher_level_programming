@@ -3,14 +3,12 @@
 
 """ Ok """
 
-import requests, sys
+import requests
+import sys
 
 
 def post_email():
-	url = sys.argv[1]
-	email = sys.argv[2]
-	val = {"email": email}
-	res = requests.post(url, data=val)
+	res = requests.post(argv[1], data={'email': argv[2]})
 	print(res.text)
 
 
