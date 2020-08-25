@@ -6,6 +6,7 @@ import sys, requests
 
 
 def error_code():
+	""" ok """
 	re = requests.get(argv[1])
 	if re.status_code > 400:
 		
