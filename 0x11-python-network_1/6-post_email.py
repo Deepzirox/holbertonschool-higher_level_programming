@@ -13,6 +13,5 @@ def post_email():
     print(res.text)
 
 
-
 if __name__ == '__main__':
     post_email()
