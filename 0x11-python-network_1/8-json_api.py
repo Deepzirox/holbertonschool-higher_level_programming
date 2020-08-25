@@ -14,7 +14,6 @@ def search():
 
     re = requests.post(
         'http://0.0.0.0:5000/search_user', data={'q': v})
-
     try:
         data = re.json()
         if data:
