@@ -3,11 +3,12 @@
 """ ok """
 
 import requests
+import sys
 
 
 def request_body():
     """ Get status usin requests """
-    req = requests.get("https://intranet.hbtn.io/status")
+    req = requests.get(sys.argv[1])
     print(req.headers["X-Request-Id"])
 
 
