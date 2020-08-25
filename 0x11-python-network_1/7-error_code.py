@@ -4,8 +4,9 @@ import sys, requests
 
 
 def error_code():
-	if requests.get(argv[1]).status_code > 400:
-		re = requests.get(argv[1])
+	re = requests.get(argv[1])
+	if re.status_code > 400:
+		
 		print("Error code: {}".format(re.status_code))
 	else:
 		print(re.text)
