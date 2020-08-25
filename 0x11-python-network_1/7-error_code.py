@@ -2,7 +2,8 @@
 
 """ ok """
 
-import sys, requests
+import sys
+import requests
 
 
 def error_code():
