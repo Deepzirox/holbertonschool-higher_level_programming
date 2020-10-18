@@ -28,3 +28,4 @@ if __name__ == '__main__':
         for cities in state.cities:
             print("    {}: {}".format(cities.id, cities.name))
     session.close()
+
