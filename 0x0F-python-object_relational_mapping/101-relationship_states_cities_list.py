@@ -2,11 +2,13 @@
 """
 Lists all State objects
 """
+
 import sys
 from relationship_state import Base, State
 from relationship_city import City
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
+
 
 if __name__ == '__main__':
     host = 'localhost'
@@ -28,4 +30,3 @@ if __name__ == '__main__':
         for cities in state.cities:
             print("    {}: {}".format(cities.id, cities.name))
     session.close()
-
